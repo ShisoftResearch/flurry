@@ -27,7 +27,7 @@ serde = {version = "1.0.105", optional = true}
 seize = "0.2.1"
 
 [dependencies.ahash]
-version = "0.7.6"
+version = "0.8"
 default-features = false
 
 # for minimal-versions

@@ -258,12 +258,15 @@ mod serde_impls;
 /// Iterator types.
 pub mod iter;
 
+use std::hash::BuildHasherDefault;
+
+use ahash::AHasher;
 pub use map::{HashMap, TryInsertError};
 pub use map_ref::HashMapRef;
 pub use set::HashSet;
 pub use set_ref::HashSetRef;
 
 /// Default hasher for [`HashMap`].
-pub type DefaultHashBuilder = ahash::RandomState;
+pub type DefaultHashBuilder = BuildHasherDefault<AHasher>;
 
 pub use seize::Guard;
